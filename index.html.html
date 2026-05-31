@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rafat Mohamed — Finance, Operations & Technology Executive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1a2744;
+    --navy-mid: #243358;
+    --accent: #c8a96e;
+    --accent-light: #e8d5a8;
+    --cream: #faf8f4;
+    --warm-white: #f5f2ec;
+    --text: #1a1a1a;
+    --text-muted: #6b6459;
+    --text-light: #9b9088;
+    --border: rgba(26, 39, 68, 0.12);
+    --rule: rgba(200, 169, 110, 0.3);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250, 248, 244, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--navy); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 5% 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 55%;
+    height: 120%;
+    background: var(--navy);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--navy);
+    margin-bottom: 0.3em;
+    letter-spacing: -0.01em;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .hero-summary {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 440px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--navy);
+    color: var(--accent-light);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: all 0.25s;
+    border: 1px solid var(--navy);
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--navy);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    transition: all 0.25s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--navy);
+  }
+
+  .hero-stats {
+    position: absolute;
+    right: 5%;
+    bottom: 12%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .stat-item {
+    text-align: right;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--accent-light);
+    line-height: 1;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(232, 213, 168, 0.6);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 100px 5%;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 4rem;
+  }
+
+  .section-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  /* IMPACT METRICS */
+  .impact-section {
+    background: var(--navy);
+    color: white;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2px;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255,255,255,0.08);
+  }
+
+  .metric-card {
+    background: var(--navy-mid);
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .metric-card:hover { background: #2d3e6a; }
+
+  .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .metric-card:hover::before { opacity: 1; }
+
+  .metric-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .metric-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .metric-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.5;
+  }
+
+  /* EXPERIENCE */
+  .experience-section { background: var(--warm-white); }
+
+  .exp-timeline {
+    position: relative;
+    padding-left: 2px;
+  }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .exp-item:last-child { border-bottom: none; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .exp-meta { padding-top: 4px; }
+
+  .exp-company {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+  }
+
+  .exp-location {
+    font-size: 12px;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .exp-dates {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-block;
+    background: rgba(200, 169, 110, 0.1);
+    padding: 4px 10px;
+  }
+
+  .exp-body {}
+
+  .exp-role {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+  }
+
+  .exp-role-secondary {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .exp-summary {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.65;
+    font-style: italic;
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .exp-bullets li {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .exp-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 10px;
+    top: 5px;
+  }
+
+  .exp-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .exp-toggle:hover {
+    background: var(--navy);
+    color: var(--accent-light);
+    border-color: var(--navy);
+  }
+
+  .exp-extra { display: none; }
+  .exp-extra.open { display: block; }
+
+  /* COMPETENCIES */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .comp-item {
+    background: var(--cream);
+    padding: 1.75rem 1.5rem;
+    transition: background 0.2s;
+  }
+
+  .comp-item:hover { background: var(--warm-white); }
+
+  .comp-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(26, 39, 68, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    color: var(--navy);
+  }
+
+  .comp-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+  }
+
+  .comp-desc {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* TECH */
+  .tech-section { background: var(--warm-white); }
+
+  .tech-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+
+  .tech-group {}
+
+  .tech-group-title {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tech-tag {
+    font-size: 12px;
+    color: var(--navy);
+    background: white;
+    border: 1px solid var(--border);
+    padding: 5px 12px;
+    font-weight: 400;
+    transition: all 0.2s;
+  }
+
+  .tech-tag:hover {
+    background: var(--navy);
+    color: var(--accent-light);
+    border-color: var(--navy);
+  }
+
+  /* EDUCATION */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .edu-card {
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .edu-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .edu-card:hover::after { transform: scaleX(1); }
+
+  .edu-year {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  .edu-school {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--navy);
+    text-align: center;
+  }
+
+  .contact-section .section-title { color: var(--accent-light); }
+  .contact-section .section-eyebrow { color: var(--accent); }
+
+  .contact-lead {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    line-height: 1.75;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-light);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(200,169,110,0.3);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+
+  .contact-link:hover { border-color: var(--accent); }
+
+  .contact-divider {
+    color: rgba(255,255,255,0.15);
+    font-size: 16px;
+  }
+
+  footer {
+    background: #111b30;
+    color: rgba(255,255,255,0.25);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+
+  /* SCROLL ANIMATIONS */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .hero::before { display: none; }
+    .hero-stats { display: none; }
+    .exp-item { grid-template-columns: 1fr; gap: 1rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Rafat Mohamed</div>
+  <ul class="nav-links">
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#technology">Technology</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Finance · Operations · Technology</div>
+    <h1>Rafat<br><em>Mohamed</em></h1>
+    <p class="hero-subtitle">M.S. · Allen Park, MI</p>
+    <p class="hero-summary">
+      Growth-oriented executive with 14+ years leading business transformation across multi-site operations. Sole P&L owner and de facto operating executive at a 31-location national brand. Track record spanning IPO readiness, M&A integration, ERP implementation, and $500M+ capital programs.
+    </p>
+    <div class="hero-ctas">
+      <a href="mailto:Rafatmohame@gmail.com" class="btn-primary">Get in Touch</a>
+      <a href="https://www.linkedin.com/in/rafat-mohamed/" target="_blank" class="btn-secondary">LinkedIn Profile</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <span class="stat-number">$500M+</span>
+      <span class="stat-label">CAPEX Modeled</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">31+</span>
+      <span class="stat-label">Locations Led</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">30+</span>
+      <span class="stat-label">Acquisitions</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">14+</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT METRICS -->
+<section class="impact-section" id="impact">
+  <div class="section-header" style="margin-bottom:3rem">
+    <span class="section-eyebrow" style="color:var(--accent)">Quantified Results</span>
+    <div class="section-rule" style="background:rgba(200,169,110,0.2)"></div>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <span class="metric-value">$20M+</span>
+      <span class="metric-label">SaaS Savings</span>
+      <p class="metric-desc">Negotiated multi-year agreements across 3–5 year terms at Lineage Logistics</p>
+    </div>
+    <div class="metric-card">
+      <span class="metric-value">$13M</span>
+      <span class="metric-label">Revenue Unlocked</span>
+      <p class="metric-desc">Charge code strategy enabling monetization of manual order entry</p>
+    </div>
+    <div class="metric-card">
+      <span class="metric-value">80%</span>
+      <span class="metric-label">Spend Utilization</span>
+      <p class="metric-desc">Managed spend optimized from 10% to 80% on $150M+ OPEX allocation</p>
+    </div>
+    <div class="metric-card">
+      <span class="metric-value">$20M+</span>
+      <span class="metric-label">Loss Sales Eliminated</span>
+      <p class="metric-desc">Customer profitability reports removing loss leaders from sales portfolio</p>
+    </div>
+    <div class="metric-card">
+      <span class="metric-value">$250M+</span>
+      <span class="metric-label">Budget Directed</span>
+      <p class="metric-desc">Annual OPEX & CAPEX IT portfolio managed through Lineage's 2024 IPO</p>
+    </div>
+    <div class="metric-card">
+      <span class="metric-value">$2.2M</span>
+      <span class="metric-label">Deal Secured</span>
+      <p class="metric-desc">Custom pricing program creating new three-company partnership</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section" id="experience">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Career History</span>
+    <div class="section-rule"></div>
+  </div>
+  <h2 class="section-title reveal" style="margin-bottom:3rem">Professional Experience</h2>
+
+  <div class="exp-timeline">
+
+    <!-- QAHWAH HOUSE -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <div class="exp-company">Qahwah House</div>
+        <div class="exp-location">Dearborn, MI</div>
+        <div class="exp-dates">Oct 2024 – Present</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Senior Director of Operations & Board Advisor</div>
+        <p class="exp-summary">
+          Sole P&L executive across 31+ locations — serving as de facto CEO, filling a CEO-equivalent role in the absence of prior corporate infrastructure.
+        </p>
+        <ul class="exp-bullets">
+          <li>Sole executive accountable for full P&L with direct responsibility for revenue, COGS, labor, and operational margins across 31+ locations nationally.</li>
+          <li>Architect and owner of Qahwah House's 3-year corporate growth strategy, establishing the roadmap for national expansion, capital deployment, and long-term profitability.</li>
+          <li>Negotiated and implemented NetSuite ERP platform, creating an integrated foundation for finance, procurement, inventory management, and operational scalability.</li>
+          <li>Led enterprise-wide deployment of Toast POS and new customer mobile application across all locations.</li>
+        </ul>
+        <button class="exp-toggle" onclick="toggleExtra(this)">Show More ↓</button>
+        <div class="exp-extra">
+          <ul class="exp-bullets" style="margin-top:0.75rem">
+            <li>Built executive performance dashboards leveraging ERP and POS data for real-time visibility into profitability, labor efficiency, and store-level trends.</li>
+            <li>Designed store-level organizational structures, career progression frameworks, and compensation models that increased role clarity and established scalable workforce planning.</li>
+            <li>Diversified domestic and international sourcing strategies during 2025 tariff impacts and Red Sea/Strait of Hormuz shipping disruptions.</li>
+            <li>Built and expanded the corporate leadership team to support rapid growth and increase retention.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINEAGE -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <div class="exp-company">Lineage Logistics</div>
+        <div class="exp-location">Novi, MI</div>
+        <div class="exp-dates">May 2021 – Oct 2024</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Senior Finance Manager, Global Technology</div>
+        <div class="exp-role-secondary">Previously: Finance Manager, Technology (May 2021 – Oct 2022)</div>
+        <p class="exp-summary">
+          Led enterprise financial strategy for $500M+ in CAPEX investments. Primary finance partner to IT through Lineage's 2024 IPO. Directed a $250M+ annual OPEX & CAPEX portfolio.
+        </p>
+        <ul class="exp-bullets">
+          <li>Corrected internal GAAP cost accounting practices and implemented labor capitalization tracking that passed external audits, eliminating risk of material weakness ahead of the public IPO.</li>
+          <li>Led IT finance strategy for 30+ acquisitions — designing underwriting frameworks and driving post-close integration of IT organizations, budgets, and cost structures.</li>
+          <li>Presented $500M+ long-range CAPEX financial model to the Board of Directors.</li>
+          <li>Grew managed spend utilization from 10% to 80%, optimizing a $150M+ OPEX allocation.</li>
+        </ul>
+        <button class="exp-toggle" onclick="toggleExtra(this)">Show More ↓</button>
+        <div class="exp-extra">
+          <ul class="exp-bullets" style="margin-top:0.75rem">
+            <li>Designed charge code strategy to standardize fees for manual order entry, unlocking $13M in annual recurring revenue.</li>
+            <li>Partnered with IT and Procurement to negotiate multi-year SaaS agreements delivering $20M+ in cumulative cost savings.</li>
+            <li>Led international financial alignment across EMEA and APAC, standardizing IT spending policies and establishing European tax-compliant invoicing.</li>
+            <li>Partnered with Data Science teams to financially validate productivity initiatives using proprietary workforce optimization algorithms.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BCBS -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <div class="exp-company">Blue Cross Blue Shield of Michigan</div>
+        <div class="exp-location">Detroit, MI</div>
+        <div class="exp-dates">Sep 2016 – May 2021</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Sr. Product Performance Analyst → Senior Project Consultant</div>
+        <ul class="exp-bullets">
+          <li>Built the P&L for the CDH product (HealthEquity), demonstrating profitability to executive leadership and identifying cost structure improvements.</li>
+          <li>Leveraged national membership data to build a zip-code-level network coverage model, enabling multi-million dollar Flex vs. Custom Network investment decisions.</li>
+          <li>Provided executive-level analysis of Wellness programs revealing pricing losses, leading to a redesign saving $500K+.</li>
+          <li>Designated as sole reporting developer on the Product Performance team, building KPI reporting across SQL, Tableau, Oracle BI, and Cognos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ALEX BRANDS -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <div class="exp-company">Alex Brands</div>
+        <div class="exp-location">Fairfield, NJ</div>
+        <div class="exp-dates">Dec 2014 – Sep 2016</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Senior Financial Analyst</div>
+        <ul class="exp-bullets">
+          <li>Designated by the Chairman of the Board to lead implementation of process and system improvements across the organization.</li>
+          <li>Served as finance lead on Oracle ERP implementation, partnering with the CIO to build BI tools (QlikView, Sage 100, Microsoft Dynamics, Oracle).</li>
+          <li>Developed customer profitability reports eliminating $20M+ in loss leader sales; recovered $12M in outstanding receivables.</li>
+          <li>Collaborated with sales executives to secure enterprise accounts including Amazon, Walmart, Target, and Marmaxx Group.</li>
+          <li>Traveled to Hong Kong to implement order management tool changes, achieving full reconciliation of orders to invoices.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MASCO -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <div class="exp-company">MASCO Cabinetry</div>
+        <div class="exp-location">Ann Arbor, MI</div>
+        <div class="exp-dates">Aug 2013 – Dec 2014</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Pricing Analyst</div>
+        <ul class="exp-bullets">
+          <li>Designated by the Chairman of the Board to lead process and system improvement implementation across the organization.</li>
+          <li>Created a custom pricing program securing a $2.2M project that established a new three-company partnership.</li>
+          <li>Managed custom pricing for Builder West and Dealer Midwest teams; oversaw annual price increases for 5,000+ SKUs.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPETENCIES -->
+<section id="expertise">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Areas of Expertise</span>
+    <div class="section-rule"></div>
+  </div>
+  <h2 class="section-title reveal" style="margin-bottom:2.5rem">Core Competencies</h2>
+
+  <div class="comp-grid reveal">
+    <div class="comp-item">
+      <div class="comp-icon">📊</div>
+      <div class="comp-name">P&L Management & Ownership</div>
+      <div class="comp-desc">Full revenue and cost accountability across multi-site operations</div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-icon">📈</div>
+      <div class="comp-name">FP&A & Financial Modeling</div>
+      <div class="comp-desc">Board-level models, long-range planning, and scenario analysis</div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-icon">⚙️</div>
+      <div class="comp-name">ERP Implementation</div>
+      <div class="comp-desc">NetSuite, Oracle, and enterprise system deployments end-to-end</div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-icon">🏗️</div>
+      <div class="comp-name">Capital Budgeting & CAPEX</div>
+      <div class="comp-desc">$500M+ investment modeling and capital allocation strategy</div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-icon">🤝</div>
+      <div class="comp-name">M&A Integration</div>
+      <div class="comp-desc">30+ acquisition underwriting frameworks and post-close integration</div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-icon">📋</div>
+      <div class="comp-name">IPO Readiness & SEC Compliance</div>
+      <div class="comp-desc">Material weakness elimination, GAAP corrections, regulatory prep</div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-icon">🌐</div>
+      <div class="comp-name">Global Finance (EMEA, APAC)</div>
+      <div class="comp-desc">International policy standardization and transfer pricing</div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-icon">🔗</div>
+      <div class="comp-name">Supply Chain & Procurement</div>
+      <div class="comp-desc">Sourcing diversification, vendor negotiation, and cost optimization</div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-icon">👥</div>
+      <div class="comp-name">Cross-functional Leadership</div>
+      <div class="comp-desc">Finance, IT, Operations, and Data Science alignment at scale</div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="tech-section" id="technology">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Tools & Platforms</span>
+    <div class="section-rule"></div>
+  </div>
+  <h2 class="section-title reveal" style="margin-bottom:3rem">Technology & Systems</h2>
+
+  <div class="tech-groups reveal">
+    <div class="tech-group">
+      <div class="tech-group-title">ERP & Finance Systems</div>
+      <div class="tech-tags">
+        <span class="tech-tag">NetSuite</span>
+        <span class="tech-tag">Oracle ERP</span>
+        <span class="tech-tag">Workday</span>
+        <span class="tech-tag">Sage 100</span>
+        <span class="tech-tag">Microsoft Dynamics</span>
+        <span class="tech-tag">Toast POS</span>
+      </div>
+    </div>
+    <div class="tech-group">
+      <div class="tech-group-title">Business Intelligence & Analytics</div>
+      <div class="tech-tags">
+        <span class="tech-tag">Power BI</span>
+        <span class="tech-tag">Tableau</span>
+        <span class="tech-tag">QlikView</span>
+        <span class="tech-tag">Oracle BI</span>
+        <span class="tech-tag">Cognos</span>
+        <span class="tech-tag">Excel (Advanced)</span>
+      </div>
+    </div>
+    <div class="tech-group">
+      <div class="tech-group-title">Data & SQL</div>
+      <div class="tech-tags">
+        <span class="tech-tag">Microsoft SQL</span>
+        <span class="tech-tag">Oracle SQL</span>
+        <span class="tech-tag">Snowflake</span>
+        <span class="tech-tag">Impala</span>
+        <span class="tech-tag">Hadoop</span>
+        <span class="tech-tag">Toad</span>
+        <span class="tech-tag">Alation</span>
+      </div>
+    </div>
+    <div class="tech-group">
+      <div class="tech-group-title">Compliance & Governance</div>
+      <div class="tech-tags">
+        <span class="tech-tag">GAAP Capitalization</span>
+        <span class="tech-tag">SEC Accounting</span>
+        <span class="tech-tag">EU Tax Compliance</span>
+        <span class="tech-tag">Data Governance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Academic Background</span>
+    <div class="section-rule"></div>
+  </div>
+  <h2 class="section-title reveal" style="margin-bottom:3rem">Education</h2>
+  <div class="edu-grid reveal">
+    <div class="edu-card">
+      <div class="edu-year">2020</div>
+      <div class="edu-degree">Master of Science<br>Financial Business Analytics</div>
+      <div class="edu-school">University of Michigan</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2013</div>
+      <div class="edu-degree">Bachelor of Science<br>Business Management</div>
+      <div class="edu-school">Wayne State University</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-header" style="justify-content:center; margin-bottom:1.5rem">
+    <span class="section-eyebrow">Get In Touch</span>
+  </div>
+  <h2 class="section-title" style="margin-bottom:1rem;">Open to Opportunities</h2>
+  <p class="contact-lead">
+    Exploring VP-level Finance, Operations, and Technology roles. Available for confidential conversations with recruiters and hiring executives.
+  </p>
+  <div class="contact-links">
+    <a href="mailto:Rafatmohame@gmail.com" class="contact-link">✉ Rafatmohame@gmail.com</a>
+    <span class="contact-divider">·</span>
+    <a href="tel:7345127278" class="contact-link">📞 (734) 512-7278</a>
+    <span class="contact-divider">·</span>
+    <a href="https://www.linkedin.com/in/rafat-mohamed/" target="_blank" class="contact-link">LinkedIn Profile ↗</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Rafat Mohamed · Allen Park, MI · All rights reserved
+</footer>
+
+<script>
+  function toggleExtra(btn) {
+    const extra = btn.nextElementSibling;
+    const isOpen = extra.classList.contains('open');
+    extra.classList.toggle('open');
+    btn.textContent = isOpen ? 'Show More ↓' : 'Show Less ↑';
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
